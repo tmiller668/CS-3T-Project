@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
-import bcrypt  # Import the bcrypt library
+import bcrypt  
 
 from config import DATABASE_CONFIG
 app = Flask(__name__)
@@ -66,6 +66,7 @@ def get_data():
         data = cursor.fetchall()
         return render_template('data.html', data=data, input_id=input_id)
     return render_template('get_data.html')
+
 @app.route('/delete/<int:id>', methods=['GET', 'POST'])
 def delete_data(id):
     if request.method == 'POST':
