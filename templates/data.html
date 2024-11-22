@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fetched Data</title>
+    <title>Account Management</title>
     <style>
         /* Add your custom CSS styles here */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: rgb(255, 255, 255);
             text-align: center;
         }
         h1 {
-            color: #333;
+            color: rgb(0, 0, 0);
             margin-bottom: 20px;
         }
         table {
             border-collapse: collapse;
-            width: 80%;
+            width: 70%;
             margin: 20px auto;
         }
         table, th, td {
@@ -29,19 +29,19 @@
             text-align: left;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: rgb(87, 89, 218);
         }
         a {
             display: block;
             margin-top: 20px;
             text-decoration: none;
-            color: #007bff;
+            color: rgb(87, 89, 218);
         }
         a:hover {
             text-decoration: underline;
         }
         .navbar {
-            background-color:rgb(25, 25, 105);
+            background-color:rgb(87, 89, 218);
             color: white;
             overflow: hidden;
             text-align: center;
@@ -67,14 +67,13 @@
         <a href="/" class="fetch-data-btn">Add Data</a>
     </div>
 
-    <h1>Fetched Data</h1>
+    <h1>Retrieved Data</h1>
     {% if data %}
         <table>
             <tr>
-                <th>ID</th>
+                <th>ID Number</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Address</th>
                 <th>Phone Number</th>
             </tr>
             {% for row in data %}
@@ -83,25 +82,21 @@
                     <td>{{ row[1] }}</td>
                     <td>{{ row[2] }}</td>
                     <td>{{ row[3] }}</td>
-                    <td>{{ row[4] }}</td>
                 </tr>
             {% endfor %}
         </table>
         <p>Input ID: {{ input_id }}</p>
     {% else %}
-        <p>No data found for the provided ID.</p>
+        <p>No match found the provided ID.</p>
     {% endif %}
     <a href="/">Back to Home</a>
-    <!-- Your fetch data template -->
+
 <table border="1">
     <tr>
-        <!-- Your table headers -->
         <th>Action</th>
     </tr>
     {% for row in data %}
         <tr>
-            <!-- Display data columns -->
-            <!-- Add a column for delete action -->
             <td>
                 <a href="/delete/{{ row[0] }}">Delete</a>
             </td>
