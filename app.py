@@ -15,7 +15,6 @@ create_table_query = """
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255),
         email VARCHAR(255),
-        Address TEXT,
         phonenumber VARCHAR(255),
         password VARCHAR(255)
     )
@@ -34,7 +33,6 @@ def submit():
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
-        address = request.form['address']
         phonenumber = request.form['phonenumber']
         
         # Hash the password before storing it
@@ -42,8 +40,8 @@ def submit():
         hashed_password = bcrypt.hashpw(password, bcrypt.gensalt())
 
         # Insert user data into the database
-        insert_query = "INSERT INTO user (name, email, Address, phonenumber, password) VALUES (%s, %s, %s, %s, %s)"
-        cursor.execute(insert_query, (name, email, address, phonenumber, hashed_password))
+        insert_query = "INSERT INTO user (name, email, phonenumber, password) VALUES (%s, %s, %s, %s)"
+        cursor.execute(insert_query, (name, email, phonenumber, hashed_password))
         db.commit()
         
         # Fetch the latest entry
