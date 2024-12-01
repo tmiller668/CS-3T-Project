@@ -5,7 +5,7 @@
     <style>
         /* Add your custom CSS styles here */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
             background-color: #f7f7f7;
@@ -57,7 +57,7 @@
             margin-bottom: 15px;
         }
         input[type="submit"] {
-            background-color: #007bff;
+            background-color: rgb(87, 89, 218);
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -69,11 +69,11 @@
             background-color: #0056b3;
         }
         .top-bar {
-            background-color: rgb(25, 25, 105); /* Change the background color */
+            background-color: rgb(87, 89, 218); /* Change the background color */
             color: #e7f1f4; /* Change the text color */
             padding: 8px;
             font-size: 24px;
-            font-family: Arial, sans-serif; /* Change the font family */
+            font-family: 'Times New Roman', Times, serif; /* Change the font family */
 
         }
         .right-links a {
@@ -82,7 +82,7 @@
             margin-left: auto;
         }
         .btn {
-            background-color: #007bff;
+            background-color: rgb(87, 89, 218);
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -105,12 +105,12 @@
     
     <div class="top-bar">
         <div class="container">
-            <img src="https://storage.googleapis.com/bkt-static-tt/logo.png" width="60" height="60" class="logo" alt="">
-            TechTrapture User Management
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ouJlqoYg7GX8xb9_lqiPI5tYj5S_OAdjTQ&s" width="60" height="60" class="logo" alt="">
+            CSRP DataManagement
         </div>
         
     </div>
-    <a href="/get-data" class="btn">Fetch Data</a>
+    <a href="/get-data" class="btn">Search</a>
     <h1>Add New User</h1>
     <form action="/submit" method="post">
         <label for="name">Name:</label><br>
@@ -121,9 +121,6 @@
 
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" required><br><br>
-        
-        <label for="address">Address:</label><br>
-        <textarea id="address" name="address" required></textarea><br><br>
         
         <label for="phonenumber">Phone Number:</label><br>
         <input type="text" id="phonenumber" name="phonenumber" required><br><br>

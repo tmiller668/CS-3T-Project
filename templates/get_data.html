@@ -6,13 +6,13 @@
     <style>
         /* Add your custom CSS styles here */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
             background-color: #f7f7f7;
         }
         .navbar {
-            background-color: rgb(25, 25, 105);
+            background-color: rgb(87, 89, 218);
             color: white;
             overflow: hidden;
             text-align: center;
@@ -39,7 +39,7 @@
             margin: 20px auto;
         }
         h1 {
-            color: #333;
+            color: black;
             margin-bottom: 20px;
         }
         form {
@@ -61,7 +61,7 @@
             margin-bottom: 15px;
         }
         input[type="submit"] {
-            background-color: #007bff;
+            background-color: rgb(87, 89, 218);
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -70,20 +70,20 @@
             transition: background-color 0.3s ease;
         }
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: rgb(87, 89, 218);
         }
 
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="#home">TechTrapture User Management</a>
-        <a href="/" class="fetch-data-btn">Add Data</a>
+        <a href="#home">CSRP DataManagement</a>
+        <a href="/" class="fetch-data-btn">Add Information</a>
     </div>
 
     
     <div class="container">
-        <h1>Fetch Data by ID</h1>
+        <h1>Search by ID</h1>
         <form action="/get-data" method="post">
             <label for="input_id">Enter ID:</label>
             <input type="text" id="input_id" name="input_id" required><br><br>
