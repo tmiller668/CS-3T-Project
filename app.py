@@ -35,7 +35,7 @@ def submit():
         email = request.form['email']
         phonenumber = request.form['phonenumber']
         
-        # Hash the password before storing it
+        # Hash the password 
         password = request.form['password'].encode('utf-8')  # Get the password from the form
         hashed_password = bcrypt.hashpw(password, bcrypt.gensalt())
 
@@ -44,7 +44,7 @@ def submit():
         cursor.execute(insert_query, (name, email, phonenumber, hashed_password))
         db.commit()
         
-        # Fetch the latest entry
+        # Fetch latest entry
         cursor.execute("SELECT * FROM user ORDER BY id DESC LIMIT 1")
         data = cursor.fetchall()
 
@@ -68,7 +68,7 @@ def get_data():
 @app.route('/delete/<int:id>', methods=['GET', 'POST'])
 def delete_data(id):
     if request.method == 'POST':
-        # Perform deletion based on the provided ID
+        # Perform deletion based on provided ID
         delete_query = "DELETE FROM user WHERE id = %s"
         cursor.execute(delete_query, (id,))
         db.commit()
